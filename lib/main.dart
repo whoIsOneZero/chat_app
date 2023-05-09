@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-//import '../widgets/chat.dart';
-//import '../widgets/messages.dart';
+import '../widgets/chat.dart';
+import '../widgets/messages.dart';
 import '../widgets/side_menu.dart';
 
 void main() => runApp(const MyApp());
