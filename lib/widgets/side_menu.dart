@@ -77,53 +77,36 @@ class SideMenu extends StatelessWidget {
               title: 'Settings',
               onTap: () {},
             ),
-            /*Expanded(
-              child: Container(
-                alignment: Alignment.bottomLeft,
-                child: const Padding(
-                  padding: EdgeInsets.all(16.0),
-                  child: CircleAvatar(
-                    backgroundColor: Colors.black,
-                    radius: 20,
-                    child: CircleAvatar(
-                      radius: 16,
-                      backgroundImage: AssetImage(
-                        'assets/user.png',
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            )*/
             Expanded(
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Container(
+                    //color: Colors.blue,
                     alignment: Alignment.bottomLeft,
-                    child: const Padding(
+                    child: Padding(
                       padding: EdgeInsets.all(16.0),
-                      child: CircleAvatar(
-                        backgroundColor: Colors.black,
-                        radius: 20,
-                        child: CircleAvatar(
-                          radius: 16,
-                          backgroundImage: AssetImage(
-                            'assets/user.png',
+                      child: Row(
+                        children: const [
+                          CircleAvatar(
+                            backgroundColor: Colors.black,
+                            radius: 20,
+                            child: CircleAvatar(
+                              radius: 16,
+                              backgroundImage: AssetImage(
+                                'assets/user.png',
+                              ),
+                            ),
                           ),
-                        ),
+                          SizedBox(width: 10.0),
+                          Text(
+                            'User',
+                            style: TextStyle(color: Colors.black),
+                          ),
+                        ],
                       ),
                     ),
                   ),
-                  Container(
-                    alignment: Alignment.bottomLeft,
-                    child: const Padding(
-                        padding: EdgeInsets.only(left: 8.0, bottom: 20.0),
-                        child: Text(
-                          'User',
-                          style: TextStyle(color: Colors.black),
-                        )),
-                  )
                 ],
               ),
             )
