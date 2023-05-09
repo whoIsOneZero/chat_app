@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/chat.dart';
-import '../widgets/messages.dart';
+//import '../widgets/chat.dart';
+//import '../widgets/messages.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({Key? key}) : super(key: key);
@@ -85,7 +85,7 @@ class SideMenu extends StatelessWidget {
                     //color: Colors.blue,
                     alignment: Alignment.bottomLeft,
                     child: Padding(
-                      padding: EdgeInsets.all(16.0),
+                      padding: const EdgeInsets.all(16.0),
                       child: Row(
                         children: const [
                           CircleAvatar(
