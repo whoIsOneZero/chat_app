@@ -14,33 +14,36 @@ class Messages extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: ListTile(
-                    leading: Text(
-                      'Messages',
-                      style: Theme.of(context)
-                          .textTheme
-                          .displayMedium!
-                          .copyWith(color: Colors.blue, fontSize: 20.0),
+                child: Container(
+                  height: 88.0,
+                  decoration: BoxDecoration(
+                      border: Border(
+                    bottom: BorderSide(color: Colors.grey.shade300, width: 1.0),
+                  )),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: ListTile(
+                      leading: Text(
+                        'Messages',
+                        style: Theme.of(context)
+                            .textTheme
+                            .displayMedium!
+                            .copyWith(color: Colors.blue, fontSize: 20.0),
+                      ),
+                      trailing: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: const [
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Icon(Icons.edit_outlined),
+                          ),
+                          Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Icon(Icons.search_outlined),
+                          ),
+                        ],
+                      ),
                     ),
-                    trailing: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: const [
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Icon(Icons.edit_outlined),
-                        ),
-                        Padding(
-                          padding: EdgeInsets.all(8.0),
-                          child: Icon(Icons.search_outlined),
-                        ),
-                      ],
-                    ),
-                    /*trailing: const Padding(
-                      padding: EdgeInsets.all(8.0),
-                      child: Icon(Icons.edit_outlined),
-                    ),*/
                   ),
                 ),
               ),
