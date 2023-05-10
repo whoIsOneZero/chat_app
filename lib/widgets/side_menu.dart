@@ -7,111 +7,124 @@ class SideMenu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        width: 220.0,
-        decoration: BoxDecoration(
-            border: Border.all(color: Colors.grey.shade300, width: 1.0)),
-        //color: Theme.of(context).primaryColor,
-        child: Column(
-          children: [
-            Container(
-              decoration: BoxDecoration(
-                  border: Border(
-                bottom: BorderSide(color: Colors.grey.shade300, width: 1.0),
-              )),
-              child: Row(
-                children: [
-                  Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Image.asset(
-                        'assets/chat_logo.png',
-                        height: 55.0,
-                        width: 30.0,
-                        filterQuality: FilterQuality.high,
-                      )),
-                  Row(children: [
-                    Text('ChitChat',
-                        style: Theme.of(context)
-                            .textTheme
-                            .displayMedium!
-                            .copyWith(fontSize: 20.0))
-                  ]),
-                ],
-              ),
+    return Container(
+      decoration: BoxDecoration(
+          //color: Colors.amberAccent,
+          border: Border.all(color: Colors.grey.shade300, width: 1.0)),
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+                border: Border(
+              bottom: BorderSide(color: Colors.grey.shade300, width: 1.0),
+            )),
+            child: Row(
+              children: [
+                Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Image.asset(
+                      'assets/chat_logo.png',
+                      height: 55.0,
+                      width: 30.0,
+                      filterQuality: FilterQuality.high,
+                    )),
+                Row(children: [
+                  Text('ChitChat',
+                      style: Theme.of(context)
+                          .textTheme
+                          .displayMedium!
+                          .copyWith(fontSize: 20.0))
+                ]),
+              ],
             ),
-            const SizedBox(height: 10.0),
-            _SideMenuIconTab(
-              iconData: Icons.dashboard_outlined,
-              title: 'Dashboard',
-              onTap: () {},
-            ),
-            _SideMenuIconTab(
-              iconData: Icons.analytics_outlined,
-              title: 'Analytics',
-              onTap: () {},
-            ),
-            _SideMenuIconTab(
-              iconData: Icons.folder_copy_outlined,
-              title: 'Files',
-              onTap: () {},
-            ),
-            _SideMenuIconTab(
-              iconData: Icons.call_outlined,
-              title: 'Call',
-              onTap: () {},
-            ),
-            const SizedBox(height: 9.0),
-            _SideMenuIconTab(
-              iconData: Icons.message_outlined,
-              title: 'Messages',
-              onTap: () {},
-            ),
-            _SideMenuIconTab(
-              iconData: Icons.people_alt_outlined,
-              title: 'Community',
-              onTap: () {},
-            ),
-            _SideMenuIconTab(
-              iconData: Icons.settings,
-              title: 'Settings',
-              onTap: () {},
-            ),
-            Expanded(
-              child: Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    //color: Colors.blue,
-                    alignment: Alignment.bottomLeft,
-                    child: Padding(
-                      padding: const EdgeInsets.all(16.0),
-                      child: Row(
-                        children: const [
-                          CircleAvatar(
-                            backgroundColor: Colors.black,
-                            radius: 20,
-                            child: CircleAvatar(
-                              radius: 16,
-                              backgroundImage: AssetImage(
-                                'assets/user.png',
-                              ),
+          ),
+          const SizedBox(height: 10.0),
+          _SideMenuIconTab(
+            iconData: Icons.dashboard_outlined,
+            title: 'Dashboard',
+            onTap: () {},
+          ),
+          _SideMenuIconTab(
+            iconData: Icons.analytics_outlined,
+            title: 'Analytics',
+            onTap: () {},
+          ),
+          _SideMenuIconTab(
+            iconData: Icons.folder_copy_outlined,
+            title: 'Files',
+            onTap: () {},
+          ),
+          _SideMenuIconTab(
+            iconData: Icons.call_outlined,
+            title: 'Call',
+            onTap: () {},
+          ),
+          const SizedBox(height: 9.0),
+          _SideMenuIconTab(
+            iconData: Icons.message_outlined,
+            title: 'Messages',
+            onTap: () {},
+          ),
+          _SideMenuIconTab(
+            iconData: Icons.people_alt_outlined,
+            title: 'Community',
+            onTap: () {},
+          ),
+          _SideMenuIconTab(
+            iconData: Icons.settings,
+            title: 'Settings',
+            onTap: () {},
+          ),
+          Expanded(
+            child: Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  //color: Colors.blue,
+                  alignment: Alignment.bottomLeft,
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Row(
+                      children: [
+                        const CircleAvatar(
+                          backgroundColor: Colors.black,
+                          radius: 20,
+                          child: CircleAvatar(
+                            radius: 16,
+                            backgroundImage: AssetImage(
+                              'assets/user.png',
                             ),
                           ),
-                          SizedBox(width: 10.0),
-                          Text(
-                            'User',
-                            style: TextStyle(color: Colors.black),
+                        ),
+                        const SizedBox(width: 10.0),
+                        Container(
+                          height: 40.0,
+                          //color: Colors.deepOrange,
+                          alignment: Alignment.bottomLeft,
+                          child: Column(
+                            children: [
+                              Text(
+                                'User',
+                                style: Theme.of(context)
+                                    .textTheme
+                                    .bodyLarge!
+                                    .copyWith(color: Colors.black),
+                              ),
+                              Text(
+                                'Logout',
+                                style: Theme.of(context).textTheme.bodyLarge,
+                              ),
+                            ],
                           ),
-                        ],
-                      ),
+                        )
+                      ],
                     ),
                   ),
-                ],
-              ),
-            )
-          ],
-        ),
+                ),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }

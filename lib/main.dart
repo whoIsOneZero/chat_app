@@ -60,9 +60,16 @@ class Shell extends StatelessWidget {
       //appBar: AppBar(
       //title: const Text("Home"),
       //),
-      body: Column(
-        children: const [
-          SideMenu(),
+      body: Row(
+        children: [
+          Container(
+            width: 200.0,
+            child: SideMenu(),
+          ),
+          Container(
+            width: 300.0,
+            child: Messages(),
+          ),
         ],
       ),
     );
