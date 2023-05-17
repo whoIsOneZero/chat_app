@@ -2,8 +2,15 @@ import 'package:flutter/material.dart';
 import '../widgets/chat.dart';
 import '../widgets/messages.dart';
 import '../widgets/side_menu.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
-void main() => runApp(const MyApp());
+void main() {
+  //Added 2 lines to prevent app from fetching font from online source
+  /*Update: took it out cos it was messing with the 'Quick Documentation'
+  WidgetsFlutterBinding.ensureInitialized();
+  GoogleFonts.config.allowRuntimeFetching = false;*/
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -28,17 +35,17 @@ class MyApp extends StatelessWidget {
             ),
             headlineMedium: TextStyle(
               fontSize: 12.0,
-              color: Colors.black45,
+              color: Colors.black,
               letterSpacing: 2.0,
             ),
             bodyLarge: TextStyle(
-              color: Colors.black45,
+              color: Colors.black,
               fontSize: 14.0,
               fontWeight: FontWeight.w600,
               letterSpacing: 1.0,
             ),
             bodyMedium: TextStyle(
-              color: Colors.black45,
+              color: Colors.black87,
               letterSpacing: 1.0,
             )),
       ),
@@ -57,16 +64,26 @@ class Shell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //appBar: AppBar(
-      //title: const Text("Home"),
-      //),
+      appBar: AppBar(
+        backgroundColor: Colors.cyan,
+      ),
+      drawer: const Drawer(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+          topRight: Radius.circular(10.0),
+          bottomRight: Radius.circular(10.0),
+        )),
+        width: 220,
+        elevation: 10.0,
+        child: SideMenu(),
+      ),
       body: Row(
-        children: [
-          Container(
+        children: const [
+          /*SizedBox(
             width: 200.0,
             child: SideMenu(),
-          ),
-          Container(
+          ),*/
+          SizedBox(
             width: 300.0,
             child: Messages(),
           ),
