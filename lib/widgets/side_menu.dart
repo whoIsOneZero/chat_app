@@ -77,17 +77,16 @@ class SideMenu extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                //color: Colors.blue,
                 alignment: Alignment.bottomLeft,
                 child: Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.all(12.0),
                   child: Row(
                     children: [
                       const CircleAvatar(
                         backgroundColor: Colors.black,
-                        radius: 20,
+                        radius: 24,
                         child: CircleAvatar(
-                          radius: 16,
+                          radius: 20,
                           backgroundImage: AssetImage(
                             'assets/user.png',
                           ),
@@ -95,16 +94,21 @@ class SideMenu extends StatelessWidget {
                       ),
                       const SizedBox(width: 10.0),
                       Container(
-                        height: 40.0,
+                        height: 44.0,
                         alignment: Alignment.bottomLeft,
                         child: Column(
                           children: [
                             Text('User',
                                 style: Theme.of(context).textTheme.bodyLarge),
-                            Text(
-                              'Logout',
-                              style: Theme.of(context).textTheme.bodyMedium,
-                            ),
+                            ElevatedButton(
+                              onPressed: () {},
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: Colors.teal),
+                              child: Text(
+                                'Logout',
+                                style: Theme.of(context).textTheme.bodyMedium,
+                              ),
+                            )
                           ],
                         ),
                       )
