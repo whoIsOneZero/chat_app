@@ -8,6 +8,7 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           decoration: BoxDecoration(
@@ -35,7 +36,7 @@ class SideMenu extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(height: 10.0),
+        //const SizedBox(height: 10.0),
         _SideMenuIconTab(
           iconData: Icons.dashboard_outlined,
           title: 'Dashboard',
@@ -56,7 +57,7 @@ class SideMenu extends StatelessWidget {
           title: 'Call',
           onTap: () {},
         ),
-        const SizedBox(height: 9.0),
+        //const SizedBox(height: 9.0),
         _SideMenuIconTab(
           iconData: Icons.message_outlined,
           title: 'Messages',
@@ -73,50 +74,43 @@ class SideMenu extends StatelessWidget {
           onTap: () {},
         ),
         Expanded(
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Container(
-                alignment: Alignment.bottomLeft,
-                child: Padding(
-                  padding: const EdgeInsets.all(12.0),
-                  child: Row(
-                    children: [
-                      const CircleAvatar(
-                        backgroundColor: Colors.black,
-                        radius: 24,
-                        child: CircleAvatar(
-                          radius: 20,
-                          backgroundImage: AssetImage(
-                            'assets/user.png',
-                          ),
-                        ),
-                      ),
-                      const SizedBox(width: 10.0),
-                      Container(
-                        height: 44.0,
-                        alignment: Alignment.bottomLeft,
-                        child: Column(
-                          children: [
-                            Text('User',
-                                style: Theme.of(context).textTheme.bodyLarge),
-                            ElevatedButton(
-                              onPressed: () {},
-                              style: ElevatedButton.styleFrom(
-                                  backgroundColor: Colors.teal),
-                              child: Text(
-                                'Logout',
-                                style: Theme.of(context).textTheme.bodyMedium,
-                              ),
-                            )
-                          ],
-                        ),
-                      )
-                    ],
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Align(
+              alignment: Alignment.bottomLeft,
+              child: Row(
+                children: [
+                  const CircleAvatar(
+                    backgroundColor: Colors.black,
+                    radius: 24,
+                    child: CircleAvatar(
+                        radius: 20,
+                        backgroundImage: AssetImage(
+                          'assets/user.png',
+                        )),
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.only(left: 8.0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Text('User',
+                            style: Theme.of(context).textTheme.bodyLarge),
+                        ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.teal),
+                          child: Text(
+                            'Logout',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          ),
+                        )
+                      ],
+                    ),
+                  )
+                ],
               ),
-            ],
+            ),
           ),
         )
       ],
