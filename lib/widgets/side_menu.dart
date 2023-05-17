@@ -8,7 +8,6 @@ class SideMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           decoration: BoxDecoration(
@@ -36,7 +35,7 @@ class SideMenu extends StatelessWidget {
             ],
           ),
         ),
-        //const SizedBox(height: 10.0),
+        const SizedBox(height: 10.0),
         _SideMenuIconTab(
           iconData: Icons.dashboard_outlined,
           title: 'Dashboard',
@@ -57,7 +56,7 @@ class SideMenu extends StatelessWidget {
           title: 'Call',
           onTap: () {},
         ),
-        //const SizedBox(height: 9.0),
+        const SizedBox(height: 9.0),
         _SideMenuIconTab(
           iconData: Icons.message_outlined,
           title: 'Messages',
