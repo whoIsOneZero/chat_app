@@ -18,10 +18,10 @@ class SideMenu extends StatelessWidget {
           child: Row(
             children: [
               Padding(
-                  padding: const EdgeInsets.all(16.0),
+                  padding: const EdgeInsets.fromLTRB(16.0, 8.0, 10.0, 8.0),
                   child: Image.asset(
                     'assets/chat_logo.png',
-                    height: 55.0,
+                    height: 50.0,
                     width: 30.0,
                     filterQuality: FilterQuality.high,
                   )),
