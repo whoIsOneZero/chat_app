@@ -93,7 +93,7 @@ class SideMenu extends StatelessWidget {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        Text('User',
+                        Text('New User',
                             style: Theme.of(context).textTheme.bodyLarge),
                         ElevatedButton(
                           onPressed: () {},
