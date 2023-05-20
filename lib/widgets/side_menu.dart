@@ -137,6 +137,11 @@ class _SideMenuIconTab extends StatelessWidget {
         color: Theme.of(context).iconTheme.color,
         size: 28.0,
       ),
+      trailing: Icon(
+        Icons.arrow_drop_down,
+        color: Theme.of(context).iconTheme.color,
+        size: 28.0,
+      ),
       title: Text(
         title,
         style: Theme.of(context).textTheme.bodyLarge,
