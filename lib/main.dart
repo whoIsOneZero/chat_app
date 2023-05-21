@@ -65,7 +65,17 @@ class Shell extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.cyan,
+        //backgroundColor: Colors.lightBlue[300],
+        flexibleSpace: Container(
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                  begin: Alignment.topCenter,
+                  end: Alignment.bottomCenter,
+                  colors: [
+                Colors.blueGrey,
+                Colors.lightBlue,
+              ])),
+        ),
       ),
       drawer: const Drawer(
         shape: RoundedRectangleBorder(

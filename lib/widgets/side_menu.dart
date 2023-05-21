@@ -95,13 +95,15 @@ class SideMenu extends StatelessWidget {
                       children: [
                         Text('New User',
                             style: Theme.of(context).textTheme.bodyLarge),
+                        const SizedBox(height: 4.0),
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.teal),
+                              backgroundColor:
+                                  Colors.blueGrey.withOpacity(0.4)),
                           child: Text(
                             'Logout',
-                            style: Theme.of(context).textTheme.bodyMedium,
+                            style: Theme.of(context).textTheme.bodyLarge,
                           ),
                         )
                       ],
