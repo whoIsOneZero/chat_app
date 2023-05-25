@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../widgets/chat.dart';
-import '../widgets/messages.dart';
+//import '../widgets/chat.dart';
+//import '../widgets/messages.dart';
 
 class SideMenu extends StatelessWidget {
   const SideMenu({Key? key}) : super(key: key);
@@ -38,38 +38,45 @@ class SideMenu extends StatelessWidget {
         ),
         const SizedBox(height: 10.0),
         _SideMenuIconTab(
-          iconData: Icons.dashboard_outlined,
+          //iconData: Icons.dashboard_outlined,
+          myIcon: const FaIcon(FontAwesomeIcons.gauge),
           title: 'Dashboard',
           onTap: () {},
         ),
         _SideMenuIconTab(
-          iconData: Icons.analytics_outlined,
+          //iconData: Icons.analytics_outlined,
+          myIcon: const Icon(Icons.analytics),
           title: 'Analytics',
           onTap: () {},
         ),
         _SideMenuIconTab(
-          iconData: Icons.folder_copy_outlined,
+          //iconData: Icons.folder_copy_outlined,
+          myIcon: const FaIcon(FontAwesomeIcons.file),
           title: 'Files',
           onTap: () {},
         ),
         _SideMenuIconTab(
-          iconData: Icons.call_outlined,
+          //iconData: Icons.call_outlined,
+          myIcon: const FaIcon(FontAwesomeIcons.phone),
           title: 'Call',
           onTap: () {},
         ),
         const SizedBox(height: 9.0),
         _SideMenuIconTab(
-          iconData: Icons.message_outlined,
+          //iconData: Icons.message_outlined,
+          myIcon: const FaIcon(FontAwesomeIcons.message),
           title: 'Messages',
           onTap: () {},
         ),
         _SideMenuIconTab(
-          iconData: Icons.people_alt_outlined,
+          //iconData: Icons.people_alt_outlined,
+          myIcon: const FaIcon(FontAwesomeIcons.peopleGroup),
           title: 'Community',
           onTap: () {},
         ),
         _SideMenuIconTab(
-          iconData: Icons.settings,
+          //iconData: Icons.settings,
+          myIcon: const Icon(Icons.settings_applications),
           title: 'Settings',
           onTap: () {},
         ),
@@ -121,24 +128,31 @@ class SideMenu extends StatelessWidget {
 }
 
 class _SideMenuIconTab extends StatelessWidget {
-  final IconData iconData;
+  //final IconData iconData;
   final String title;
   final VoidCallback onTap;
+  final Widget myIcon;
 
   const _SideMenuIconTab(
       {Key? key,
-      required this.iconData,
+      //required this.iconData,
       required this.onTap,
-      required this.title})
+      required this.title,
+      required this.myIcon})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: Icon(
+      /*leading: Icon(
         iconData,
-        color: Theme.of(context).iconTheme.color,
-        size: 28.0,
+        //color: Theme.of(context).iconTheme.color,
+        color: Colors.lightBlueAccent.withOpacity(0.6),
+        size: 26.0,
+      ),*/
+      leading: IconButton(
+        onPressed: null,
+        icon: myIcon,
       ),
       trailing: Icon(
         Icons.arrow_forward_ios_rounded,
