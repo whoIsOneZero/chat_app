@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 //import '../widgets/chat.dart';
 //import '../widgets/messages.dart';
 
@@ -91,10 +92,11 @@ class SideMenu extends StatelessWidget {
                     backgroundColor: Colors.black,
                     radius: 24,
                     child: CircleAvatar(
-                        radius: 20,
-                        backgroundImage: AssetImage(
-                          'assets/user.png',
-                        )),
+                      radius: 20,
+                      backgroundImage: AssetImage(
+                        'assets/user.png',
+                      ),
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 8.0),
@@ -107,8 +109,9 @@ class SideMenu extends StatelessWidget {
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                              backgroundColor:
-                                  Colors.blueGrey.withOpacity(0.4)),
+                            backgroundColor: Colors.blueGrey.withOpacity(0.2),
+                            elevation: 1,
+                          ),
                           child: Text(
                             'Logout',
                             style: Theme.of(context).textTheme.bodyLarge,
@@ -151,7 +154,9 @@ class _SideMenuIconTab extends StatelessWidget {
         size: 26.0,
       ),*/
       leading: IconButton(
-        onPressed: null,
+        onPressed: onTap,
+        iconSize: 25,
+        color: Colors.brown,
         icon: myIcon,
       ),
       trailing: Icon(

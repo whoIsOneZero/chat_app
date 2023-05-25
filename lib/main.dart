@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../widgets/chat.dart';
+
+//import '../widgets/chat.dart';
 import '../widgets/messages.dart';
 import '../widgets/side_menu.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -68,13 +69,12 @@ class Shell extends StatelessWidget {
         //backgroundColor: Colors.lightBlue[300],
         flexibleSpace: Container(
           decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                Colors.blueGrey,
-                Colors.lightBlue,
-              ])),
+            gradient: LinearGradient(
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+              colors: [Colors.brown, Colors.blueGrey, Colors.brown],
+            ),
+          ),
         ),
       ),
       drawer: const Drawer(
