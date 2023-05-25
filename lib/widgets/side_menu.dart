@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../widgets/chat.dart';
 import '../widgets/messages.dart';
 
@@ -142,7 +143,7 @@ class _SideMenuIconTab extends StatelessWidget {
       trailing: Icon(
         Icons.arrow_forward_ios_rounded,
         color: Theme.of(context).iconTheme.color,
-        size: 28.0,
+        size: 10.0,
       ),
       title: Text(
         title,
