@@ -77,7 +77,9 @@ class Shell extends StatelessWidget {
           ),
         ),
       ),
-      drawer: const Drawer(
+
+      ///Taken out the 'Drawer()'
+      /*drawer: const Drawer(
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
           topRight: Radius.circular(10.0),
@@ -86,15 +88,15 @@ class Shell extends StatelessWidget {
         width: 220,
         elevation: 10.0,
         child: SideMenu(),
-      ),
+      ),*/
       body: Row(
         children: const [
-          /*SizedBox(
-            width: 200.0,
-            child: SideMenu(),
-          ),*/
           SizedBox(
-            width: 300.0,
+            width: 250.0,
+            child: SideMenu(),
+          ),
+          SizedBox(
+            width: 250.0,
             child: Messages(),
           ),
         ],
