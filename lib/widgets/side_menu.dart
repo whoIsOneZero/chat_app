@@ -20,10 +20,14 @@ class SideMenu extends StatelessWidget {
           child: Row(
             children: [
               const Padding(
-                padding: EdgeInsets.fromLTRB(16.0, 8.0, 1.0, 14.0),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/messageIconBrown.jpg'),
-                  radius: 18,
+                padding: EdgeInsets.fromLTRB(16.0, 8.0, 10.0, 14.0),
+                child: SizedBox(
+                  height: 50.0,
+                  width: 30.0,
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/messageIconBrown.jpg'),
+                    radius: 18,
+                  ),
                 ),
 
                 /// Previous image
