@@ -19,14 +19,19 @@ class SideMenu extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Padding(
-                  padding: const EdgeInsets.fromLTRB(16.0, 8.0, 10.0, 8.0),
-                  child: Image.asset(
-                    'assets/chat_logo.png',
-                    height: 50.0,
-                    width: 30.0,
-                    filterQuality: FilterQuality.high,
-                  )),
+              const Padding(
+                padding: EdgeInsets.fromLTRB(16.0, 8.0, 10.0, 14.0),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/messageIconBrown.jpg'),
+                  radius: 18,
+                ),
+                /*Image.asset(
+                  'assets/messageIconBrown.jpg',
+                  height: 50.0,
+                  width: 30.0,
+                  filterQuality: FilterQuality.high,
+                ),*/
+              ),
               Row(children: [
                 Text('ChitChat',
                     style: Theme.of(context)
@@ -107,7 +112,7 @@ class SideMenu extends StatelessWidget {
                             style: Theme.of(context).textTheme.bodyLarge),
                         const SizedBox(height: 4.0),
                         ElevatedButton(
-                          onPressed: () {},
+                          onPressed: null,
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blueGrey.withOpacity(0.2),
                             elevation: 1,
@@ -157,6 +162,8 @@ class _SideMenuIconTab extends StatelessWidget {
         onPressed: onTap,
         iconSize: 25,
         color: Colors.brown,
+        hoverColor: Colors.transparent,
+        splashColor: Colors.transparent,
         icon: myIcon,
       ),
       trailing: Icon(
@@ -170,6 +177,7 @@ class _SideMenuIconTab extends StatelessWidget {
         overflow: TextOverflow.ellipsis,
       ),
       onTap: onTap,
+      //splashColor: Colors.transparent,
     );
   }
 }
