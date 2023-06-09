@@ -19,25 +19,26 @@ class SideMenu extends StatelessWidget {
           ),
           child: Row(
             children: [
-              const Padding(
-                padding: EdgeInsets.fromLTRB(16.0, 8.0, 10.0, 14.0),
-                child: SizedBox(
-                  height: 50.0,
+              Padding(
+                padding: const EdgeInsets.fromLTRB(18.0, 8.0, 8.0, 8.0),
+                child: Image.asset(
+                  'assets/message_icon.jpg',
+                  height: 62.0,
+                  width: 40.0,
+                  filterQuality: FilterQuality.high,
+                ),
+              ),
+
+              /// Previous image
+              /*SizedBox(
+                  height: 72.0,
                   width: 30.0,
                   child: CircleAvatar(
                     backgroundImage: AssetImage('assets/messageIconBrown.jpg'),
-                    radius: 18,
+                    radius: 28,
                   ),
-                ),
-
-                /// Previous image
-                /*Image.asset(
-                  'assets/messageIconBrown.jpg',
-                  height: 50.0,
-                  width: 30.0,
-                  filterQuality: FilterQuality.high,
                 ),*/
-              ),
+
               Row(children: [
                 Text('ChitChat',
                     style: Theme.of(context)

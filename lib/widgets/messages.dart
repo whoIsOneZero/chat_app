@@ -14,7 +14,7 @@ class Messages extends StatelessWidget {
             children: [
               Expanded(
                 child: Container(
-                  height: 88.0,
+                  height: 78.0,
                   decoration: BoxDecoration(
                       //color: Colors.amberAccent,
                       border: Border(

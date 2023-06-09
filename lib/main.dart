@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.grey,
         appBarTheme: const AppBarTheme(backgroundColor: Colors.white),
         brightness: Brightness.light,
-        iconTheme: const IconThemeData().copyWith(color: Colors.blueGrey),
+        //iconTheme: const IconThemeData().copyWith(color: Colors.blueGrey),
         scaffoldBackgroundColor: Colors.white,
         fontFamily: 'Montserrat',
         textTheme: const TextTheme(
@@ -65,6 +65,8 @@ class Shell extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      ///Taken out the AppBar() as well
+      /*
       appBar: AppBar(
         //backgroundColor: Colors.lightBlue[300],
         flexibleSpace: Container(
@@ -76,7 +78,7 @@ class Shell extends StatelessWidget {
             ),
           ),
         ),
-      ),
+      ),*/
 
       ///Taken out the 'Drawer()'
       /*drawer: const Drawer(
