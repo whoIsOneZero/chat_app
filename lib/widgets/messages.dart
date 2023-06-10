@@ -30,7 +30,7 @@ class Messages extends StatelessWidget {
                           style: Theme.of(context)
                               .textTheme
                               .displayMedium!
-                              .copyWith(color: Colors.black87, fontSize: 22.0),
+                              .copyWith(color: Colors.black, fontSize: 20.0),
                         ),
                       ),
                       trailing: Row(

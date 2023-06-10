@@ -19,15 +19,21 @@ class SideMenu extends StatelessWidget {
           ),
           child: Row(
             children: [
-              Padding(
-                padding: const EdgeInsets.fromLTRB(18.0, 8.0, 8.0, 8.0),
-                child: Image.asset(
+              Container(
+                height: 75.0,
+                width: 60.0,
+                padding: EdgeInsets.only(left: 18.0),
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/message_icon.jpg'),
+                  radius: 40.0,
+                ),
+              ),
+              /*child: Image.asset(
                   'assets/message_icon.jpg',
                   height: 62.0,
                   width: 40.0,
                   filterQuality: FilterQuality.high,
-                ),
-              ),
+                ),*/
 
               /// Previous image
               /*SizedBox(
@@ -51,14 +57,14 @@ class SideMenu extends StatelessWidget {
         ),
         const SizedBox(height: 10.0),
         _SideMenuIconTab(
-          //iconData: Icons.dashboard_outlined,
-          myIcon: const FaIcon(FontAwesomeIcons.gauge),
+          myIcon: const Icon(Icons.dashboard_outlined),
+          //myIcon: const FaIcon(FontAwesomeIcons.gauge),
           title: 'Dashboard',
           onTap: () {},
         ),
         _SideMenuIconTab(
           //iconData: Icons.analytics_outlined,
-          myIcon: const Icon(Icons.analytics),
+          myIcon: const Icon(Icons.analytics_outlined),
           title: 'Analytics',
           onTap: () {},
         ),
@@ -69,8 +75,8 @@ class SideMenu extends StatelessWidget {
           onTap: () {},
         ),
         _SideMenuIconTab(
-          //iconData: Icons.call_outlined,
-          myIcon: const FaIcon(FontAwesomeIcons.phone),
+          myIcon: Icon(Icons.call_outlined),
+          //myIcon: const FaIcon(FontAwesomeIcons.phone),
           title: 'Call',
           onTap: () {},
         ),
@@ -82,8 +88,8 @@ class SideMenu extends StatelessWidget {
           onTap: () {},
         ),
         _SideMenuIconTab(
-          //iconData: Icons.people_alt_outlined,
-          myIcon: const FaIcon(FontAwesomeIcons.peopleGroup),
+          myIcon: Icon(Icons.people_alt_outlined),
+          //myIcon: const FaIcon(FontAwesomeIcons.peopleGroup),
           title: 'Community',
           onTap: () {},
         ),
@@ -168,7 +174,8 @@ class _SideMenuIconTab extends StatelessWidget {
       leading: IconButton(
         onPressed: onTap,
         iconSize: 25,
-        color: Colors.brown,
+        color: Colors.black87,
+        //color: const Color(0xff1d4ab3),
         hoverColor: Colors.transparent,
         splashColor: Colors.transparent,
         icon: myIcon,
