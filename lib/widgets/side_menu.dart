@@ -19,15 +19,25 @@ class SideMenu extends StatelessWidget {
           ),
           child: Row(
             children: [
+              SizedBox(
+                width: 18.0,
+              ),
               Container(
-                height: 75.0,
+                height: 78.0,
                 width: 60.0,
-                padding: EdgeInsets.only(left: 18.0),
-                child: CircleAvatar(
-                  backgroundImage: AssetImage('assets/message_icon.jpg'),
-                  radius: 40.0,
+                color: Colors.amberAccent,
+                //padding: EdgeInsets.only(left: 18.0),
+                child: SizedBox(
+                  height: 40.0,
+                  width: 40.0,
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage('assets/message_icon.jpg'),
+                    //radius: 40.0,
+                  ),
                 ),
               ),
+
+              /// Previous image
               /*child: Image.asset(
                   'assets/message_icon.jpg',
                   height: 62.0,
@@ -35,7 +45,6 @@ class SideMenu extends StatelessWidget {
                   filterQuality: FilterQuality.high,
                 ),*/
 
-              /// Previous image
               /*SizedBox(
                   height: 72.0,
                   width: 30.0,
@@ -45,6 +54,9 @@ class SideMenu extends StatelessWidget {
                   ),
                 ),*/
 
+              SizedBox(
+                width: 10.0,
+              ),
               Row(children: [
                 Text('ChitChat',
                     style: Theme.of(context)
