@@ -24,16 +24,11 @@ class SideMenu extends StatelessWidget {
               ),
               Container(
                 height: 78.0,
-                width: 60.0,
-                color: Colors.amberAccent,
-                //padding: EdgeInsets.only(left: 18.0),
-                child: SizedBox(
-                  height: 40.0,
-                  width: 40.0,
-                  child: CircleAvatar(
-                    backgroundImage: AssetImage('assets/message_icon.jpg'),
-                    //radius: 40.0,
-                  ),
+                width: 50.0,
+                //color: Colors.amberAccent,
+                child: CircleAvatar(
+                  backgroundImage: AssetImage('assets/message_icon.jpg'),
+                  radius: 10.0,
                 ),
               ),
 
